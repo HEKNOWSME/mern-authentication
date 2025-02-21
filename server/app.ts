@@ -11,7 +11,7 @@ const port = process.env.PORT || 3000;
 connectDb()
 app.use(cookieParser())
 app.use(json());
-app.use(cors({ credentials: true , origin: "http://localhost:5173",}));
+app.use(cors({ credentials: true , origin: "https://mern-authentication-pi.vercel.app",}));
 app.use("/api/users", userRouter);
 app.use("/api/users", userDataRouter);
 app.listen(port, () => console.log(`Listen to the port ${port}`)
