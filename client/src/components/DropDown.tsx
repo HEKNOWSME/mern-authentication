@@ -17,7 +17,7 @@ const DropDown = ({ username, isVerified }: Props) => {
 			return navigate("/", { replace: true });
 		}
 		apiClient
-			.post("/users/logout", {}, { withCredentials: true })
+			.post("/users/logout", {})
 			.then(({ data }) => {
 				navigate("/", { replace: true });
 				toast.success(data);
