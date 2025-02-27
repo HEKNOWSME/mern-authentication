@@ -8,6 +8,8 @@ const NavBar = () => {
 	const navigate = useNavigate();
 	const { isLoggedIn, userData, setProfile, showProfile } =
 		useContext(UserContext);
+	console.log(userData);
+	
 	return (
 		<div className="w-full flex justify-between sticky top-0 px-2 items-center bg-cyan-500">
 			<img
