@@ -10,6 +10,8 @@ const HomePage = () => {
 	const [isLoading, setLoading] = useState(true);
 	const [showProfile, setProfile] = useState(false);
 	const [userData, setUser] = useState<UserInterface>();
+	console.log(isLoggedIn);
+	
 	const login = useCallback(() => {
 		setLoggedIng(true);
 	}, []);
