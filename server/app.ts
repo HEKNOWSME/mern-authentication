@@ -14,5 +14,8 @@ app.use(json());
 app.use(cors({ credentials: true , origin: "https://mern-authentication-pi.vercel.app",}));
 app.use("/api/users", userRouter);
 app.use("/api/users", userDataRouter);
+app.get("/", (req, res) => {
+   res.send("Hello World")
+});
 app.listen(port, () => console.log(`Listen to the port ${port}`)
 )
