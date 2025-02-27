@@ -26,7 +26,7 @@ export const registerUser = async (req: Request, res: Response) => {
          maxAge: 15 * 60 * 1000,
          httpOnly: true,
          secure: process.env.NODE_ENV === "production",
-         sameSite: process.env.NODE_ENV === "production" ? "none" : "strict"
+         sameSite:"none"
       }).send("User successful Registered");
 
       const mailOptions: MailOptions = {
@@ -68,7 +68,7 @@ export const loginUser = async (req: Request, res: Response) => {
          maxAge: 15 * 60 * 1000,
          httpOnly: true,
          secure: process.env.NODE_ENV === "production",
-         sameSite: process.env.NODE_ENV === "production" ? "none" : "strict"
+         sameSite: "none"
       }).json({message: "Login successful", userId: user._id});
    } catch (error: any) {
       console.log(error.message);
