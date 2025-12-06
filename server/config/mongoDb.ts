@@ -6,5 +6,5 @@ const connectDb = async () => {
    } catch (err: any) {
       return console.log(err.message)
    }
-}
+}  
 export default connectDb
